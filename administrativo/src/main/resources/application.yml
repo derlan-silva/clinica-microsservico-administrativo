@@ -1,17 +1,13 @@
 spring:
-  application:
-    name: administrativo
   datasource:
-    url: jdbc:postgresql://localhost:123456/clinica_administrativo
+    url: jdbc:postgresql://localhost:5432/clinica_db
     username: postgres
-    password: sua_senha_do_postgres
+    password: sua_senha_aqui
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
     properties:
       hibernate:
-        format_sql: true
-
-server:
-  port: 8081
+        dialect: org.hibernate.dialect.PostgreSQLDialect
