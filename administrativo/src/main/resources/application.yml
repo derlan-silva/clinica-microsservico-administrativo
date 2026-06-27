@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: administrativo
+  datasource:
+    url: jdbc:postgresql://localhost:123456/clinica_administrativo
+    username: postgres
+    password: sua_senha_do_postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8081
